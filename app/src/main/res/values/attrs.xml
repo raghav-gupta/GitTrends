@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Repo List Header-->
+    <attr name="headerBackgroundColor" format="reference" />
+    <attr name="headerTextColor" format="reference" />
+    <attr name="headerMenuIcon" format="reference" />
+    <attr name="lineSeparatorColor" format="reference" />
+    <attr name="menuIconColor" format="reference" />
+
+    <!--Repo List Error-->
+    <attr name="errorBackgroundColor" format="reference" />
+    <attr name="errorMainTextColor" format="reference" />
+    <attr name="errorSubTextColor" format="reference" />
+    <attr name="errorRetryTextColor" format="reference" />
+    <attr name="retryBackgroundColor" format="reference" />
+
+    <!--Repo List Item Row-->
+    <attr name="itemTextColor" format="reference" />
+    <attr name="itemLangIcon" format="reference" />
+    <attr name="itemStarIcon" format="reference" />
+    <attr name="itemForkIcon" format="reference" />
+</resources>

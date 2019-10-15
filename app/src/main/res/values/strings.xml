@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Git Trends</string>
+    <string name="trending">Trending</string>
+    <string name="sort_star">Sort by stars</string>
+    <string name="sort_name">Sort by name</string>
+    <string name="something_wrong">Something went wrong..</string>
+    <string name="alien_message">An alien is probably blocking your signal.</string>
+    <string name="retry">Retry</string>
+</resources>

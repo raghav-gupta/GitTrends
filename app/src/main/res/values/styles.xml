@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/headerText</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--Repo List header-->
+        <item name="headerBackgroundColor">@color/headerBackground</item>
+        <item name="headerTextColor">@color/headerText</item>
+        <item name="headerMenuIcon">@drawable/ic_menu_icon</item>
+        <item name="lineSeparatorColor">@color/lineSeparator</item>
+        <item name="menuIconColor">@color/menuIconColor</item>
+
+        <!--Repo List Error-->
+        <item name="errorBackgroundColor">@color/errorBackground</item>
+        <item name="errorMainTextColor">@color/errorMainText</item>
+        <item name="errorSubTextColor">@color/errorSubText</item>
+        <item name="errorRetryTextColor">@color/errorRetryText</item>
+        <item name="retryBackgroundColor">@color/retryBackground</item>
+
+        <!--Repo List Item -->
+        <item name="itemTextColor">@color/itemText</item>
+        <item name="itemLangIcon">@drawable/ic_language_icon</item>
+        <item name="itemStarIcon">@drawable/ic_star_icon</item>
+        <item name="itemForkIcon">@drawable/ic_fork_icon</item>
+    </style>
+
+</resources>

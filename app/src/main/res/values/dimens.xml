@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bar_height">56dp</dimen>
+    <dimen name="gt21sp">21sp</dimen>
+    <dimen name="gt4dp">4dp</dimen>
+    <dimen name="gt16dp">16dp</dimen>
+    <dimen name="gt14sp">14sp</dimen>
+    <dimen name="gt12dp">12dp</dimen>
+    <dimen name="gt8dp">8dp</dimen>
+    <dimen name="gt24dp">24dp</dimen>
+    <dimen name="gt18sp">18sp</dimen>
+    <dimen name="gt15sp">15sp</dimen>
+    <dimen name="gt48dp">48dp</dimen>
+    <dimen name="gt1dp">1dp</dimen>
+    <dimen name="gt12sp">12sp</dimen>
+    <dimen name="gt6dp">6dp</dimen>
+    <dimen name="gt32dp">32dp</dimen>
+    <dimen name="gt21dp">21dp</dimen>
+    <dimen name="gt36dp">36dp</dimen>
+    <dimen name="gt140dp">140dp</dimen>
+</resources>

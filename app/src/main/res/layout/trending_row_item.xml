@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/row_item_selector">
+
+
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="@dimen/gt32dp"
+            android:layout_height="@dimen/gt32dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvRepoName"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/tvAuthorName" />
+
+        <TextView
+            android:id="@+id/tvAuthorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@{model.author}"
+            android:textColor="@color/itemText"
+            android:textSize="@dimen/gt12sp"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/vImageEnd"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            tools:text="mbinary" />
+
+        <TextView
+            android:id="@+id/tvRepoName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gt6dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@{model.repo}"
+            android:textColor="@color/itemText"
+            android:textSize="@dimen/gt12sp"
+            app:layout_constraintBottom_toTopOf="@id/clDetailLayout"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/vImageEnd"
+            app:layout_constraintTop_toBottomOf="@id/tvAuthorName"
+            tools:text="Python is happening right now" />
+
+        <View
+            android:id="@+id/vImageEnd"
+            android:layout_width="@dimen/gt16dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivProfileImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/vDivider"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/gt1dp"
+            android:background="@color/lineSeparator"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+
+        <View
+            android:id="@+id/vShadow"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/gt6dp"
+            android:background="@drawable/shadow"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDetailLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gt8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintStart_toEndOf="@id/vImageEnd"
+            app:layout_constraintTop_toBottomOf="@id/tvRepoName"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vDetailEnd">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLangIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_language_icon" />
+
+                <TextView
+                    android:id="@+id/tvLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/gt4dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@{model.language}"
+                    android:textColor="@color/itemText"
+                    android:textSize="@dimen/gt12sp"
+                    tools:text="C++" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivStarIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/gt4dp"
+                    app:srcCompat="@drawable/ic_star_icon" />
+
+                <TextView
+                    android:id="@+id/tvStarCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@{Integer.toString(model.stars)}"
+                    android:textColor="@color/itemText"
+                    android:textSize="@dimen/gt12sp"
+                    tools:text="240" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivForkIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/gt4dp"
+                    app:srcCompat="@drawable/ic_fork_icon" />
+
+                <TextView
+                    android:id="@+id/tvForkCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/gt4dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@{Integer.toString(model.forks)}"
+                    android:textColor="@color/itemText"
+                    android:textSize="@dimen/gt12sp"
+                    tools:text="4,376" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDetailInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@{model.repoDetailWithUrl}"
+                android:textColor="@color/itemText"
+                android:textSize="@dimen/gt12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Открытое письмо специалистов IT-индустрии в защиту фигурантов «московского дела»(https://github.com/developers-against-repressions/case-212)" />
+
+            <View
+                android:id="@+id/vDetailEnd"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gt8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDetailInfo" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/gt16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/top_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/gt16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottom_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/gt16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/gt16dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.entity.TrendingItem" />
+    </data>
+
+</layout>

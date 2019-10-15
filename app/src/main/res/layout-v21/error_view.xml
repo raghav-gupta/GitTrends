@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/errorBackgroundColor">
+
+    <View
+        android:id="@+id/lineSeparator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/gt1dp"
+        android:background="?attr/lineSeparatorColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivNoInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/something_wrong"
+        android:src="@drawable/no_internet_connection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSomethingWrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gt24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/something_wrong"
+        android:textColor="?attr/errorMainTextColor"
+        android:textSize="@dimen/gt18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivNoInternet" />
+
+    <TextView
+        android:id="@+id/tvErrorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gt8dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/alien_message"
+        android:textColor="?attr/errorSubTextColor"
+        android:textSize="@dimen/gt15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSomethingWrong"
+
+        />
+
+    <TextView
+        android:id="@+id/tvRetry"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/gt48dp"
+        android:layout_marginStart="@dimen/gt16dp"
+        android:layout_marginEnd="@dimen/gt16dp"
+        android:layout_marginBottom="@dimen/gt16dp"
+        android:background="@drawable/retry_box"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="@string/retry"
+        android:textColor="?attr/errorRetryTextColor"
+        android:textSize="@dimen/gt15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

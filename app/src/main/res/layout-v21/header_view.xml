@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/vMenuDismiss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/headerView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bar_height"
+        android:background="?attr/headerBackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/trending"
+        android:textColor="?attr/headerTextColor"
+        android:textSize="@dimen/gt21sp"
+        app:layout_constraintBottom_toBottomOf="@id/headerView"
+        app:layout_constraintEnd_toEndOf="@id/headerView"
+        app:layout_constraintStart_toStartOf="@id/headerView"
+        app:layout_constraintTop_toTopOf="@id/headerView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMenuIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/gt6dp"
+        app:layout_constraintBottom_toBottomOf="@id/headerView"
+        app:layout_constraintEnd_toEndOf="@id/headerView"
+        app:layout_constraintTop_toTopOf="@id/headerView"
+        app:srcCompat="?attr/headerMenuIcon" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layoutMenu"
+        android:layout_width="@dimen/gt140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/gt12dp"
+        android:layout_marginBottom="@dimen/gt8dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="?attr/headerBackgroundColor"
+        app:cardCornerRadius="@dimen/gt4dp"
+        app:cardElevation="@dimen/gt8dp"
+        app:layout_constraintEnd_toEndOf="@id/ivMenuIcon"
+        app:layout_constraintTop_toBottomOf="@id/tvHeaderTitle"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/topSpace"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gt8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSortStar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_selector"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:padding="@dimen/gt16dp"
+                android:text="@string/sort_star"
+                android:textColor="?attr/headerTextColor"
+                android:textSize="@dimen/gt14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topSpace"
+                tools:text="Sort by star" />
+
+            <TextView
+                android:id="@+id/tvSortName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_selector"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:padding="@dimen/gt16dp"
+                android:text="@string/sort_name"
+                android:textColor="?attr/headerTextColor"
+                android:textSize="@dimen/gt14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSortStar" />
+
+            <View
+                android:id="@+id/bottomSpace"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/gt8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSortName" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

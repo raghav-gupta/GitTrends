@@ -1,0 +1,1 @@
+include ':app', ':entity', ':interactors', ':repository', ':datasource'

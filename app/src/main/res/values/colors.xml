@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5C5858</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="headerBackground">#FFFFFF</color>
+    <color name="headerText">#25282B</color>
+    <color name="menuIconColor">#FF000000</color>
+    <color name="menuHighlight">#F5F5F5</color>
+    <color name="lineSeparator">#E8E8E8</color>
+    <color name="errorBackground">#FAFAFA</color>
+    <color name="errorMainText">#4A4A4A</color>
+    <color name="errorSubText">#929292</color>
+    <color name="errorRetryText">#31B057</color>
+    <color name="retryBackground">#FFFFFF</color>
+    <color name="itemText">#52575C</color>
+    <color name="itemBackground">#FFFFFF</color>
+    <color name="itemBackgroundHighlight">#F5F5F5</color>
+</resources>
